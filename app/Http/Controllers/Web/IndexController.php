@@ -10,17 +10,40 @@ class IndexController extends Controller
     //
     public function index()
     {
-	$list = [
-			[
-				'name' => 'jack',
-				'age' => '22',
-			],
-			[
-                                'name' => 'jack1',
-                                'age' => '23',
-                        ],
 
-	];
-	return view('Index.index', compact('list'));
+        $list = array(
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            ),
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            ),
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            ),
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            ),
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            ),
+            array(
+                'name' => '用户',
+                'age' => '年龄',
+                'sex' => '性别',
+            )
+        );
+
+	    return view('Index.index', compact('list'));
     }
 }

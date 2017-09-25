@@ -12,7 +12,7 @@
 
 
 @section('content')
-    <h1 class="page-header">Dashboard</h1>
+    {{--<h1 class="page-header">Dashboard</h1>
 
     <div class="row placeholders">
         <div class="col-xs-6 col-sm-3 placeholder">
@@ -35,56 +35,28 @@
             <h4>Label</h4>
             <span class="text-muted">Something else</span>
         </div>
-    </div>
+    </div>--}}
 
-    <h2 class="sub-header">Section title</h2>
+    <h2 class="sub-header">列表展示</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Header</th>
-                    <th>Header</th>
-                    <th>Header</th>
-                    <th>Header</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1,001</td>
-                    <td>Lorem</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>
-                    <td>sit</td>
-                </tr>
-                <tr>
-                    <td>1,002</td>
-                    <td>amet</td>
-                    <td>consectetur</td>
-                    <td>adipiscing</td>
-                    <td>elit</td>
-                </tr>
-                <tr>
-                    <td>1,003</td>
-                    <td>Integer</td>
-                    <td>nec</td>
-                    <td>odio</td>
-                    <td>Praesent</td>
-                </tr>
-                <tr>
-                    <td>1,003</td>
-                    <td>libero</td>
-                    <td>Sed</td>
-                    <td>cursus</td>
-                    <td>ante</td>
-                </tr>
-                <tr>
-                    <td>1,004</td>
-                    <td>dapibus</td>
-                    <td>diam</td>
-                    <td>Sed</td>
-                    <td>nisi</td>
-                </tr>
+                @if(!empty($list))
+                    @foreach($list as $key => $value)
+                        <tr>
+                            <td>{{ $value['name'].$key }}</td>
+                            <td>{{ $value['age'].$key }}</td>
+                            <td>{{ $value['sex'].$key }}</td>
+                        </tr>
+                    @endforeach
+                @endif
             </tbody>
         </table>
     </div>
