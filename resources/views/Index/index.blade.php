@@ -45,6 +45,7 @@
                     <th>姓名</th>
                     <th>年龄</th>
                     <th>性别</th>
+                    <th>操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +55,10 @@
                             <td>{{ $value['name'].$key }}</td>
                             <td>{{ $value['age'].$key }}</td>
                             <td>{{ $value['sex'].$key }}</td>
+                            <td>
+                                <button class="btn btn-primary btn-xs" type="button">编辑</button>
+                                <button class="btn btn-danger btn-xs" type="button">删除</button>
+                            </td>
                         </tr>
                     @endforeach
                 @endif
